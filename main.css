@@ -20,6 +20,7 @@ body {
     color: var(--black);
 }
 
+/* Typography */
 h1 {
     font-size: 40px;
     font-weight: 900;
@@ -34,16 +35,28 @@ h2 {
 }
 
 p {
+    font-size: 16px;
+    line-height: 162.5%;
     color: var(--grey);
 }
 
+.overline {
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 162.5%;
+    color: var(--teal);
+    margin-bottom: 24px;
+}
+
+/* Buttons */
 button {
     padding: 16px 40px;
     border-radius: 100px;
     font-size: 16px;
     font-weight: 900;
     color: var(--white);
-    z-index: 100;
 }
 
 .btn_info {
@@ -56,7 +69,6 @@ button {
 
 .btn_violet span {
     color: hsla(268, 100%, 86%, 1);
-    margin-left: 4px;
 }
 
 .btn_violet:hover, .btn_violet:active {
@@ -69,7 +81,6 @@ button {
 
 .btn_teal span {
     color: hsla(192, 90%, 77%, 1);
-    margin-left: 4px;
 }
 
 .btn_teal:hover, .btn_teal:active {
@@ -80,40 +91,58 @@ button {
     padding: 48px 24px 54px;
 }
 
-figure {
-    overflow: hidden;
-}
-
-figure > img {
-    width: calc(100% + 40px);
-    object-fit: contain;
-    object-position: -20px;
-}
-
+/* Content */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px 24px 0px;
 }
 
-header {
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+    overflow: hidden;
+}
+
+.hero img:first-of-type {
+    width: 108%;
+}
+
+.hero img:nth-of-type(2), .hero img:nth-of-type(3) {
+    display: none;
+}
+
+.hero-content {
     max-width: 467px;
+    margin-top: 48px;
+    padding: 0 24px;
 }
 
-header > h1 {
+.hero-content > h1 {
     margin-bottom: 24px;
 }
 
-header > p {
+.hero-content > p {
     margin-bottom: 32px;
 }
 
-header > div {
+.hero-content > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 16px;
+}
+
+/* About Section */
+.about {
+    max-width: 467px;
+    padding: 0 24px;
 }
 
 .image-container {
@@ -130,16 +159,7 @@ header > div {
     border-radius: 8px;
 }
 
-.overline {
-    font-size: 16px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    line-height: 162.5%;
-    color: var(--teal);
-    margin-bottom: 24px;
-}
-
+/* Section Seperator */
 .section-seperator {
     display: flex;
     flex-direction: column;
@@ -170,13 +190,17 @@ header > div {
     border-right: 1px solid hsla(240, 10%, 57%, 0.25);
 }
 
+/* Footer */
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 92px 24px 72px;
-    background: linear-gradient(hsla(192, 37%, 48%, .9), hsla(192, 37%, 48%, .9)), url(./assets/mobile/image-footer.jpg);
+    background: 
+        linear-gradient(hsla(192, 37%, 48%, .9), 
+        hsla(192, 37%, 48%, .9)), 
+        url(./assets/images/footer-mobile.jpg);
     background-size: cover;
     color: var(--white);
     margin-top: -28px;
